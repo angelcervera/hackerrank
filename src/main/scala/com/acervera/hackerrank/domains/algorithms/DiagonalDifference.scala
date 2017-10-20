@@ -1,4 +1,4 @@
-package com.acervera.hackerrank.warmup
+package com.acervera.hackerrank.domains.algorithms
 
 object DiagonalDifference {
   def difference(matrix: Array[Array[Int]]): Long = {

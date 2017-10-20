@@ -1,4 +1,4 @@
-package com.acervera.hackerrank.warmup
+package com.acervera.hackerrank.domains.algorithms
 
 object SimpleArraySum {
   def simpleArraySum(n: Int, ar: Array[Int]): Int = ar.sum

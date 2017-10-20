@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.BirthdayCakeCandles
 import org.scalatest.{FunSuite, Matchers}
 
 class BirthdayCakeCandlesTest extends FunSuite with Matchers {

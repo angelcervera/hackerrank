@@ -1,4 +1,4 @@
-package com.acervera.hackerrank.warmup
+package com.acervera.hackerrank.domains.algorithms
 
 object AVeryBigSum {
   def aVeryBigSum(n: Int, ar: Array[Long]): Long =  ar.sum

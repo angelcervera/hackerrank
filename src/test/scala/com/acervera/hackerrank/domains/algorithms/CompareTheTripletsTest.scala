@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.CompareTheTriplets
 import org.scalatest.{FunSuite, Matchers}
 
 class CompareTheTripletsTest extends FunSuite with Matchers {

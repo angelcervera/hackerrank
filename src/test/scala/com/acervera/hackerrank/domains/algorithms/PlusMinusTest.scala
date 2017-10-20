@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.PlusMinus
 import org.scalactic.TolerantNumerics
 import org.scalatest.{FunSuite, Matchers}
 

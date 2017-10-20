@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.AVeryBigSum
 import org.scalatest.{FunSuite, Matchers}
 
 class AVeryBigSumTest extends FunSuite with Matchers {

@@ -1,7 +1,7 @@
-package com.acervera.hackerrank.warmup
+package com.acervera.hackerrank.domains.algorithms
 
-import java.time.format.DateTimeFormatter
 import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 
 object TimeConversion {
 

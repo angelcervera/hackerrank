@@ -1,4 +1,4 @@
-package com.acervera.hackerrank.warmup
+package com.acervera.hackerrank.domains.algorithms
 
 object BirthdayCakeCandles {
   def birthdayCakeCandles(n: Int, ar: Array[Int]): Int =  {

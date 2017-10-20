@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.DiagonalDifference
 import org.scalatest.{FunSuite, Matchers}
 
 class DiagonalDifferenceTest extends FunSuite with Matchers {

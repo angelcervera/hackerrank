@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.SimpleArraySum
 import org.scalatest.{FunSuite, Matchers}
 
 class SimpleArraySumTest extends FunSuite with Matchers{

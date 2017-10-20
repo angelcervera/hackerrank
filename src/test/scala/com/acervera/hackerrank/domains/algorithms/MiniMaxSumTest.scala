@@ -1,5 +1,6 @@
 package com.acervera.hackerrank.warmup
 
+import com.acervera.hackerrank.domains.algorithms.MiniMaxSum
 import org.scalatest.{FunSuite, Matchers}
 
 class MiniMaxSumTest extends FunSuite with Matchers {
