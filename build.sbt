@@ -1,10 +1,30 @@
-name := "hackerrank"
 
-version := "0.1"
+version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.12.4"
-
-libraryDependencies ++= Seq(
-  "org.scalatest" % "scalatest_2.12" % "3.0.4" % Test,
-  "org.scalactic" %% "scalactic" % "3.0.4" % Test
+lazy val commonSettings = Seq(
+  organization := "com.acervera.hackerrank.scala",
+  scalaVersion := "2.12.8",
+  licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
+  libraryDependencies ++= Seq(
+    "org.scalatest" %% "scalatest" % "3.0.5" % "test",
+    "org.scalactic" %% "scalactic" % "3.0.5"
+  )
 )
+
+
+lazy val domainAlgorithms = (project in file("domains/algorithms")).
+  settings(commonSettings: _*).
+  settings(
+    Seq(
+      name := "algorithms"
+    )
+  )
+
+lazy val interviewPreparationKit = (project in file("interview_preparation_kit")).
+  settings(commonSettings: _*).
+  settings(
+    Seq(
+      name := "interviewpreparationkit"
+    )
+  )
+
