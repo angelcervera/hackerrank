@@ -7,7 +7,8 @@ lazy val commonSettings = Seq(
   licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
   libraryDependencies ++= Seq(
     "org.scalatest" %% "scalatest" % "3.0.5" % "test",
-    "org.scalactic" %% "scalactic" % "3.0.5"
+    "org.scalactic" %% "scalactic" % "3.0.5",
+    "com.github.pathikrit" %% "better-files" % "3.8.0" % Test
   )
 )
 

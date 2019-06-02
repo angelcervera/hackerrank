@@ -6,13 +6,15 @@ object Solution {
 
   // Complete the arrayManipulation function below.
   def arrayManipulation(n: Int, queries: Array[Array[Int]]): Long = {
-    queries
-      .foldLeft(Array.fill[Long](n)(0))( (acc, query) => applyOperations(acc, query(0), query(1), query(2)))
-      .max
+    (1 to n)
+      .foldLeft(0L)( (maxVal, colIdx) => maxValOfColumn(colIdx, queries).max(maxVal))
   }
 
-  def applyOperations(array: Array[Long], from: Int, to: Int, value: Int) : Array[Long] =
-    array.take(from -1) ++ array.slice(from -1, to).map(_ + value) ++ array.takeRight(array.size - to)
+  def maxValOfColumn(colIdx: Int, queries: Array[Array[Int]]) =
+    queries.foldLeft(0L)( (colVal, query) => inc(colIdx, colVal, query(0), query(1), query(2)))
+
+  def inc(colIdx: Long, colVal: Long, from: Int, to: Int, addVal: Int) =
+    if(colIdx >= from && colIdx <= to) colVal + addVal else colVal
 
   def main(args: Array[String]) {
     val stdin = scala.io.StdIn
