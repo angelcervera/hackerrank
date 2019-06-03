@@ -8,7 +8,7 @@ class SolutionSpec extends WordSpecLike with Matchers {
 
   "arrayManipulation" should {
     "pass the basic example" in {
-      arrayManipulation(2, Array(
+      arrayManipulation(5, Array(
         Array(1,2,100),
         Array(2,5,100),
         Array(3,4,100)
@@ -31,21 +31,13 @@ class SolutionSpec extends WordSpecLike with Matchers {
     (arraySize, queries)
   }
 
-//  "process highest number of operations for one column" in {
-//    maxValOfColumn(1, Array.fill[Array[Int]](200000)(Array(1, 1, 2))) should be (400000L)
-//  }
   "process highest number of operations for highest number of columns" in {
     arrayManipulation(30000000, Array.fill[Array[Int]](200000)(Array(1, 1, 2))) should be (400000L)
   }
 
-  "process example 10" should {
+  "process example 10" in {
     val input = loadFile("interview_preparation_kit/src/test/resources/com/acervera/hackerrank/scala/interviewpreparationkit/arraymanipulation/input10.txt")
-//    "calculate one column in time" in {
-//      maxValOfColumn(5317704, input._2) should be (2497860894L)
-//    }
-    "calculate all columns in time" in {
-      arrayManipulation(input._1, input._2) should be (2510535321L)
-    }
+    arrayManipulation(input._1, input._2) should be (2510535321L)
   }
 
 }

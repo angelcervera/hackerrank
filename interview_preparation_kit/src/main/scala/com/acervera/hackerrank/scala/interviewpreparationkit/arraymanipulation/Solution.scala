@@ -6,15 +6,20 @@ object Solution {
 
   // Complete the arrayManipulation function below.
   def arrayManipulation(n: Int, queries: Array[Array[Int]]): Long = {
-    (1 to n)
-      .foldLeft(0L)( (maxVal, colIdx) => maxValOfColumn(colIdx, queries).max(maxVal))
+    val (_FROM, _TO, _VALUE) = (0,1,2)
+
+    val summedWithDifferences = Array.ofDim[Long](n)
+    queries.foreach{
+      query => {
+        summedWithDifferences(query(_FROM)-1)+=query(_VALUE)
+        if (query(_TO)!=n)
+          summedWithDifferences(query(_TO))-=query(_VALUE)
+
+        println(summedWithDifferences.toList)
+      }
+    }
+    summedWithDifferences.foldLeft((0L,0L)) {case ((total,result),num) => (total+num,result max (total+num))}._2
   }
-
-  def maxValOfColumn(colIdx: Int, queries: Array[Array[Int]]) =
-    queries.foldLeft(0L)( (colVal, query) => inc(colIdx, colVal, query(0), query(1), query(2)))
-
-  def inc(colIdx: Long, colVal: Long, from: Int, to: Int, addVal: Int) =
-    if(colIdx >= from && colIdx <= to) colVal + addVal else colVal
 
   def main(args: Array[String]) {
     val stdin = scala.io.StdIn
